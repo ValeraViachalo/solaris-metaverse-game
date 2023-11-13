@@ -1,0 +1,92 @@
+@import "../../../styles/global.scss";
+
+.head {
+  height: 520px;
+  display: flex;
+
+  @include mq($tablet-large) {
+    height: 80vh;
+    max-height: 800px;
+  }
+
+  &__image {
+    @include mq($tablet-large) {
+      object-position: right;
+    }
+  }
+
+  &__title {
+    color: $cream;
+    position: absolute;
+    top: 165px;
+    left: 380px;
+    width: 300px;
+
+    @include mq($tablet-large) {
+      top: 13vh;
+      left: 10vw;
+    }
+  }
+
+  &__phases {
+    align-self: flex-end;
+    margin-left: 50px;
+
+    &_title {
+      margin-bottom: 16px;
+
+      font-weight: bold;
+      letter-spacing: 4.48px;
+      text-transform: uppercase;
+      font-family: Inter, sans-serif;
+    }
+
+    &_list {
+      display: flex;
+      gap: 26px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid $white;
+      padding-bottom: 10px;
+
+      @include mq($tablet-large) {
+        gap: 8px;
+      }
+    }
+
+    &_item {
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        background-color: $white;
+        position: absolute;
+        top: 130%;
+        left: 50%;
+      }
+
+      &:last-child {
+        margin-left: 50px;
+
+        @include mq($tablet-large) {
+          margin-left: 16px;
+        }
+      }
+    }
+
+    &_link {
+      font-size: 20px;
+      padding: 6px;
+      transition: all 0.2s ease;
+
+      @include mq($tablet-large) {
+        font-size: 1rem;
+      }
+
+      &:hover {
+        color: $cream;
+      }
+    }
+  }
+}

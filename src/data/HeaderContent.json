@@ -1,26 +1,32 @@
 [
   {
     "title": "About Us",
-    "link": "#"
+    "link": "#",
+    "type": ""
   },
   {
     "title": "Contacts",
-    "link": "#"
+    "link": "contacts",
+    "type": "link"
   },
   {
     "title": "Road Map",
-    "link": "#"
+    "link": "roadmap",
+    "type": "link"
   },
   {
     "title": "Collection",
-    "link": "#"
+    "link": "#",
+    "type": ""
   },
   {
     "title": "Marketplace",
-    "link": "#"
+    "link": "#",
+    "type": ""
   },
   {
     "title": "White Papeper",
-    "link": "#"
+    "link": "#",
+    "type": ""
   }
 ]

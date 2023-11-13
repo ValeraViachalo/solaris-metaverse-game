@@ -1,0 +1,54 @@
+@import "../../../styles/global.scss";
+
+.event_card {
+  display: flex;
+  align-items: center;
+  height: 580px; 
+
+  @include mq($laptop) {
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    gap: 90px;
+    text-align: center;
+    color: $black;
+
+    @include mq($laptop) {
+      flex-direction: column;
+    }
+  }
+  
+  &__main_text {
+    max-width: 440px;
+  }
+  
+  &__date_event {
+    margin-bottom: 8px;
+    padding: 0 18px 8px;
+    border-bottom: 1px solid $black;
+  }
+  
+  &__type_event {
+    mix-blend-mode: overlay;
+    
+  }
+  
+}
+
+.event {
+  &__title {
+    color: $dark-grey;
+    letter-spacing: 13px;
+    text-align: center;
+    margin: 50px 0 20px;
+
+    @include mq($laptop) {
+      font-size: 2rem;
+    }
+  }
+}

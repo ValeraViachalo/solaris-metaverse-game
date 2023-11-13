@@ -9,6 +9,7 @@ type Props = {
   customClass?: string;
   classSection?: string;
   type?: "video" | "image";
+  style?: React.CSSProperties;
 };
 
 const FullWidthBg = forwardRef<HTMLDivElement, Props>(({
@@ -18,7 +19,8 @@ const FullWidthBg = forwardRef<HTMLDivElement, Props>(({
   customClass = "",
   classSection = "",
   type = "image",
-  ...props
+  style,
+  ...otherProps
 }, ref) => {
   const classForBg = classNames('full_width_image__item', customClass);;
 
@@ -26,7 +28,7 @@ const FullWidthBg = forwardRef<HTMLDivElement, Props>(({
     
 
   return (
-    <div className={classForSection} ref={ref} {...props}>
+    <div className={classForSection} ref={ref} style={style} {...otherProps}>
       {type === "video" && typeof url === "string" ? (
         <video
           loop

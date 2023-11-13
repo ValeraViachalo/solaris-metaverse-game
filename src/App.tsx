@@ -3,6 +3,8 @@ import { AnimatePresence } from 'framer-motion';
 import React from 'react';
 import Header from './components/Header/Header';
 import Home from './pages/HomePage/HomePage';
+import RoadMap from './pages/RoadMap/RoadMap';
+import Contacts from './pages/Contacts/Contacts';
 
 function App() {
   return (
@@ -12,13 +14,18 @@ function App() {
 
         <section className="app__section">
           <Routes>
-            <Route path="/" element={<Home />}/>
+            <Route path="/" element={<Home />} />
             <Route path="home" element={<Navigate to="/" replace />} />
 
-            {/* <Route
+            <Route
               path="roadmap"
               element={<RoadMap />}
-            /> */}
+            />
+            
+            <Route
+              path="contacts"
+              element={<Contacts />}
+            />
           </Routes>
         </section>
       </main>

@@ -10,7 +10,7 @@
 
   &__body {
     display: flex;
-    gap: 26px;
+    gap: 10px;
     flex-direction: column;
 
   }
@@ -25,6 +25,12 @@
     cursor: pointer;
     @include hoverForLinks($black, $white);
     padding: 10px 6px;
+
+    &_item {
+      position: relative;
+      z-index: 1000;
+      display: block;
+    }
   }
 }
 

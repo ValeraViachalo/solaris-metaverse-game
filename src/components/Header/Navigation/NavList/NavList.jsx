@@ -2,20 +2,20 @@ import "./NavList.scss";
 import { motion } from "framer-motion";
 import { perspective } from "./anim";
 import HeaderContent from "../../../../data/HeaderContent.json";
+import { Link } from "react-router-dom";
 
-function NavList() {
+function NavList({ setIsActive }) {
   return (
     <div className="nav">
       <div className="nav__body">
         {HeaderContent.map((currentLink, i) => {
-          const { title, link } = currentLink;
+          const { title, link, type } = currentLink;
           return (
             <div
               key={`b_${i}`}
               className="nav__linkContainer"
             >
-              <motion.a
-                href={link}
+              <motion.div
                 className="nav__link"
                 custom={i}
                 variants={perspective}
@@ -23,8 +23,24 @@ function NavList() {
                 animate="enter"
                 exit="exit"
               >
-                {title}
-              </motion.a>
+                {type === 'link' ? (
+                  <Link
+                    to={link}
+                    className="nav__link_item"
+                    onClick={() => setIsActive(false)}
+                  >
+                    {title}
+                  </Link>
+                ) : (
+                  <a 
+                    href={link}
+                    className="nav__link_item"
+                    onClick={() => setIsActive(false)}
+                  >
+                    {title}
+                  </a>
+                )}
+              </motion.div>
             </div>
           );
         })}

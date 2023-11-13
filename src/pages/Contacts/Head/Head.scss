@@ -1,0 +1,35 @@
+@import "../../../styles/global.scss";
+
+.contacts_head {
+  height: 88.5vh;
+  position: relative;
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    max-width: 1240px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 85.6%;
+
+    .bigger {
+      font-size: 96px;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%);
+    transition: all .3s ease;
+    
+    &:hover {
+      color: $cream;
+      mix-blend-mode: difference;
+    }
+  }
+}

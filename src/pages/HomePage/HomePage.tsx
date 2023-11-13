@@ -9,7 +9,7 @@ import Story from './Story/Story'
 export default function Home() {
 
   return (
-    <main id="js-scroll">
+    <main>
       <Hero />
       <Future />
       <Download />

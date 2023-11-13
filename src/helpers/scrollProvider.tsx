@@ -19,6 +19,7 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
       locomotiveScroll.current = new LocomotiveScroll({
         lenisOptions: {
           duration: 0.7,
+          lerp: 0.5,
           smoothTouch: true,
           smoothWheel: true
         }
@@ -31,7 +32,7 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
     e.preventDefault() 
     locomotiveScroll.current.scrollTo(currentLink, { 
       duration: 2.7, 
-      offset: -100 
+      offset: -250 
     })
   }
 

@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $black;
+  height: 90px;
+  
+  &_list {
+    display: flex;
+    padding: 0 12px;
+
+    &_item {
+      border-top: 1px solid $black;
+      position: relative;
+    }
+  }
+  
+  &_link {
+    padding: 20px 10px;
+    display: block;
+    color: $white;
+    @include hoverForLinks($white)
+  }
+}
+
+.navigation {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}

@@ -1,5 +1,5 @@
-import { ScrollContext } from "@/helpers/scrollContext";
 import { FC, ReactNode, useContext } from "react";
+import { ScrollContext } from '../../helpers/scrollContext';
 
 type Props = {
   toSection: string;

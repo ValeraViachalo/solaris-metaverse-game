@@ -1,5 +1,5 @@
-import FullWidthBg from '@/components/FullWidthBg/FullWidthBg';
-import styles from './AboutProject.module.scss'
+import FullWidthBg from '../../../components/FullWidthBg/FullWidthBg';
+import './AboutProject.scss'
 
 const AboutProject = () => {
   return (
@@ -7,9 +7,9 @@ const AboutProject = () => {
       <FullWidthBg
         type='video'
         url={'/videos/AboutProject.mp4'}
-        customClass={styles.about_project}  
+        customClass="about_project" 
       >
-        <div className={styles.text}>  
+        <div className="about_project__text">  
           <h2 className="bold">EXPLORE OUTER SPACE</h2>
           <p>
             Venture through the stars and explore more than 10.000 generated planets. Navigate bustling cities, explore dangerous bases, and traverse wild landscapes. Meet and recruita memorable cast of characters, join in the adventures of various factions, and embark on quests across the Settled Systems.

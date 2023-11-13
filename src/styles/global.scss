@@ -1,7 +1,11 @@
 @import "./utils/typography";
+@import "./utils/fonts";
+@import "./utils/mixins";
+@import "./utils/variables";
 
 body {
   color: $white;
   max-width: 1440px;
   margin: 0 auto !important;
+  @extend %body-text;
 }

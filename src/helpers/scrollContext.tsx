@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode } from 'react'
+import React, { createContext } from 'react'
 
 type ScrollToFunction = (event: React.MouseEvent, currentLink: string) => void
 

@@ -1,7 +1,7 @@
 "use client";
 import { FC, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import styles from "./Navigatio.module.scss";
+import "./Navigation.scss";
 import NavList from "./NavList/NavList";
 
 type BtnProps = {
@@ -32,9 +32,9 @@ export default function Navigation() {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className={styles.navigation}>
+    <div className="navigation">
       <motion.div
-        className={styles.menu}
+        className="navigation__menu"
         variants={menu}
         animate={isActive ? "open" : "closed"}
         initial="closed"
@@ -53,29 +53,29 @@ export default function Navigation() {
 
 const Button: FC<BtnProps> = ({ isActive, toggleMenu }) => {
   return (
-    <div className={styles.button}>
+    <div className="navigation__button">
       <motion.div
-        className={styles.slider}
+        className="navigation__button_slider"
         animate={{ top: isActive ? "-100%" : "0%" }}
         transition={{ duration: 0.5, type: "tween", ease: [0.76, 0, 0.24, 1] }}
       >
         <div
-          className={styles.el}
+          className="el"
           onClick={() => {
             toggleMenu();
           }}
         >
-          <div className={styles.perspectiveText}>
+          <div className="perspectiveText">
             <p>Menu</p>
           </div>
         </div>
         <div
-          className={styles.el}
+          className="el"
           onClick={() => {
             toggleMenu();
           }}
         >
-          <div className={styles.perspectiveText}>
+          <div className="perspectiveText">
             <p>Close</p>
           </div>
         </div>

@@ -1,8 +1,7 @@
-/* eslint-disable react/prop-types */
 import { motion, useInView } from 'framer-motion';
-import React, { FC, useEffect, useRef } from 'react';
+import React, { FC, useRef } from 'react';
 
-import styles from './TextSplit.module.scss';
+import './TextSplit.scss';
 
 const slideUp = {
   initial: {
@@ -35,12 +34,12 @@ export const TextSplit: FC<Props> = ({
   return (
     <p
       ref={description}
-      className={styles.text_split}
+      className="text_split"
     >
       {phrase.split('').map((word, index) => (
         <span
           key={index}
-          className={styles.mask}
+          className="text_split__mask"
         >
           <motion.span
             variants={slideUp}

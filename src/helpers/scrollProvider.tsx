@@ -17,11 +17,11 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
     ;(async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default
       locomotiveScroll.current = new LocomotiveScroll({
-          el: document.querySelector('#js-scroll'),
-          smooth: true,
+        lenisOptions: {
           duration: 0.7,
           smoothTouch: true,
           smoothWheel: true
+        }
       })
     })()
   }, [])

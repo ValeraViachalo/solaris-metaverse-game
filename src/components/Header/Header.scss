@@ -1,11 +1,19 @@
+@import "../../styles/global.scss";
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: $black;
   height: 90px;
+
+  &__navigation {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  }
   
-  &_list {
+  &__list {
     display: flex;
     padding: 0 12px;
 
@@ -15,7 +23,7 @@
     }
   }
   
-  &_link {
+  &__link {
     padding: 20px 10px;
     display: block;
     color: $white;
@@ -23,8 +31,3 @@
   }
 }
 
-.navigation {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}

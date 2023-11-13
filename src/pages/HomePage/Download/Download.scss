@@ -1,0 +1,40 @@
+@import "../../../styles/global.scss";
+
+.download {
+    height: 888px;
+    position: relative;
+    background-color: $black;
+    
+    &__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    
+        &__futere_title{
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+    
+        & p {
+            text-align: center;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+    
+            background: linear-gradient(91deg, #DDE4D3 5.6%, #F9B187 34.36%, #F1B1CC 59.53%, #F8FAAD 116.45%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    
+        & a{
+            margin-bottom: 10px;
+        }
+    }
+}
+
+

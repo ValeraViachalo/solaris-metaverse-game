@@ -1,19 +1,17 @@
-import FullWidthBg from '@/components/FullWidthBg/FullWidthBg';
-import styles from './Future.module.scss'
-import FutureImage from "../../../public/images/future/future.jpg";
-import Image from 'next/image';
-
+import FullWidthBg from '../../../components/FullWidthBg/FullWidthBg';
+import './Future.scss';
+import FutureImage from '../../../images/future/future.png';
 
 const Future = () => {
   return (
     <section>
       <FullWidthBg
-        type='video'
+        type='image'
         url={FutureImage}
-        customClass={styles.future}  
+        customClass="future"  
       >
-        <div className={styles.text}>  
-          <h2 className={`big-text ${styles.futere_title}`}>EXPERIENCE OF THE FUTURE </h2>
+        <div className="future__text">  
+          <h2 className="big-text future__title">EXPERIENCE OF THE FUTURE </h2>
           <p>
           Solaris is a blockchain-based meta-universe that has huge potential to grow and attract millions of users from around the world.  Solaris is a unique combination of gameplay, blockchain and token economy with the ability to earn money through pools and in-game activities, SMV promises to be one of the most popular and innovative crypto-games on the market in 2024.
           </p>

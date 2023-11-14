@@ -34,10 +34,6 @@
     align-self: flex-end;
     margin-left: 50px;
 
-    @include mq($tablet) {
-      display: none;
-    }
-
     &_title {
       margin-bottom: 16px;
 

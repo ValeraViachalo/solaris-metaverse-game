@@ -1,4 +1,5 @@
 import FullWidthBg from '../../../components/FullWidthBg/FullWidthBg';
+import AboutVideo from '../../../videos/AboutProject.mp4'
 import './AboutProject.scss'
 
 const AboutProject = () => {
@@ -6,7 +7,7 @@ const AboutProject = () => {
     <section id="about-project">
       <FullWidthBg
         type='video'
-        url={'/videos/AboutProject.mp4'}
+        url={'AboutVideo'}
         customClass="about_project" 
       >
         <div className="about_project__text">  

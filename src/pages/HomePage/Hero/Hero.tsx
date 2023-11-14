@@ -53,7 +53,7 @@ const Hero = () => {
           <div className="about__buttons">
             <AnchorLink
               toSection='about-project'
-              customClass="about__link"
+              customClass="about_link"
             >
               Game experience
             </AnchorLink>

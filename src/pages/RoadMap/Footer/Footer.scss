@@ -2,7 +2,7 @@
 
 .footer {
   color: $dark-grey;
-  margin: 60px 0 20px;
+  margin: 3.6vw 0;
 
   &__text {
     display: flex;
@@ -43,14 +43,19 @@
   }
 
   &__link {
-    font-size: 20px;
+    font-size: 1.5vw;
     color: $black;
     padding: 3px 10px;
-    
-    @include hoverForLinks($black, $white);
+    transition: all .3s ease;
 
-    @include mq($laptop) {
-      font-size: 1rem;
+    @include mq($tablet, '>') {
+      &:hover {
+        color: $cream;
+      }
+    }
+
+    @include mq() {
+      font-size: 4vw;
     }
   }
 }

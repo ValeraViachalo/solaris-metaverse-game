@@ -17,7 +17,7 @@ const ContactsHead: FC<Props> = ({ isOpen, setIsOpen }) => {
         classSection="contacts_head"
       >
         <h1 className="contacts_head__title">
-          <span className="bigger">You{" "}</span>ARE
+          <span className="bigger">You{" "}</span>ARE{" "}
           <span className="bigger">NOT ALONE{" "}</span> IN THE{" "}
           <span className="bigger">S</span>OLARIS UNIVERSE!
         </h1>

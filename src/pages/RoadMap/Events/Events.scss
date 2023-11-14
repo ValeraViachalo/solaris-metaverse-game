@@ -35,13 +35,17 @@
   }
   
   &__main_text {
-    max-width: 440px;
+    max-width: 24vw;
+
+    @include mq() {
+      max-width: 80vw;
+    }
   }
   
   &__date_event {
     margin-bottom: 8px;
     padding: 0 18px 8px;
-    border-bottom: 1px solid $black;
+    border-bottom: 0.2vw solid $black;
     mix-blend-mode: difference;
     color: cornflowerblue;
   }
@@ -58,7 +62,7 @@
     color: $dark-grey;
     letter-spacing: 13px;
     text-align: center;
-    margin: 50px 0 20px;
+    margin: 2.5vw 0 1.2vw;
 
     @include mq($laptop) {
       font-size: 2rem;

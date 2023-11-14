@@ -39,6 +39,10 @@
     margin-bottom: 2.5vw;
     margin-left: 2.5vw;
 
+    @include mq() {
+      margin-left: 6.5vw;
+    }
+
     &_title {
       margin-bottom: 1vw;
 

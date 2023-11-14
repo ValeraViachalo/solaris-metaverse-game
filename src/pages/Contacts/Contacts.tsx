@@ -2,9 +2,10 @@ import { useState } from 'react';
 import ContactsHead from './Head/Head';
 import { AnimatePresence } from 'framer-motion';
 import Socials from './Socials/Socials';
+import Creators from './Creators/Creators';
 
 const Contacts = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <main>
@@ -12,9 +13,12 @@ const Contacts = () => {
         isOpen={isOpen}
         setIsOpen={setIsOpen}
       />
-      <AnimatePresence>
+
+      <Socials isOpen={isOpen}></Socials>
+      <Creators />
+      {/* <AnimatePresence>
         {isOpen && <Socials isOpen={isOpen}/>}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </main>
   );
 };

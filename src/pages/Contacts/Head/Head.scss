@@ -1,7 +1,6 @@
 @import "../../../styles/global.scss";
 
 .contacts_head {
-  height: 100vh;
   position: relative;
 
   &__title {
@@ -10,13 +9,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80vw;
-    max-width: 1240px;
     text-align: center;
     font-weight: bold;
     line-height: 85.6%;
 
     .bigger {
-      font-size: 96px;
+      font-size: 6vw;
     }
   }
 

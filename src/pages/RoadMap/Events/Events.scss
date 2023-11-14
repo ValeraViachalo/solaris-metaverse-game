@@ -3,7 +3,17 @@
 .event_card {
   display: flex;
   align-items: center;
-  height: 580px; 
+  height: 45vw;
+  background: 
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0)
+    );
+
+  @include mq() {
+    height: 50vw;
+  }
 
   @include mq($laptop) {
     justify-content: center;
@@ -14,9 +24,10 @@
     display: flex;
     align-items: center;
     padding: 60px;
-    gap: 90px;
+    gap: 3vw;
     text-align: center;
-    color: $black;
+    color: $white;
+    margin: 0 auto;
 
     @include mq($laptop) {
       flex-direction: column;
@@ -31,11 +42,13 @@
     margin-bottom: 8px;
     padding: 0 18px 8px;
     border-bottom: 1px solid $black;
+    mix-blend-mode: difference;
+    color: cornflowerblue;
   }
   
   &__type_event {
-    mix-blend-mode: overlay;
-    
+    mix-blend-mode: difference;
+    color: cornflowerblue;
   }
   
 }

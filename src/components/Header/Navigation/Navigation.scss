@@ -13,11 +13,17 @@
   &__button {
     width: 10vw;
     height: 7vw;
-    font-size: 2vw;
     cursor: pointer;
     overflow: hidden;
     position: relative;
     z-index: 21;
+
+    @extend %link;
+
+    @include mq() {
+      width: 14vw;
+      height: 10vw;
+    }
 
     &_slider {
       position: relative;

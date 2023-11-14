@@ -1,3 +1,5 @@
+@import "./mixins";
+
 %h1 {
   font-family: Din, sans-serif;
   font-size: 48px;
@@ -9,34 +11,49 @@
 
 %h2 {
   font-family: Din, sans-serif;
-  font-size: 2.5vw;
+  font-size: 3vw;
   font-style: normal;
   font-weight: normal;
   line-height: normal;
+
+  @include mq() {
+    font-size: 4vw;
+  }
 }
 
 %body-text {
   font-family: Inter, sans-serif;
-  font-size: 24px;
+  font-size: 1.5vw;
   font-style: normal;
   font-weight: 500;
+
+  @include mq() {
+    font-size: 3vw;
+  }
 }
 
 %link {
   font-family: Din, sans-serif;
-  // font-size: 32px;
   font-size: 2.3vw;
   font-style: normal;
   line-height: normal;
   font-weight: 400;
   text-transform: uppercase;
+
+  @include mq() {
+    font-size: 4vw;
+  }
 }
 
 .small-text {
   font-family: Inter, sans-serif;
-  font-size: 16px;
+  font-size: 1.3vw;
   font-style: normal;
   font-weight: 500;
+
+  @include mq() {
+    font-size: 2.5vw;
+  }
 }
 
 .big-text {
@@ -46,6 +63,10 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+
+  @include mq() {
+    font-size: 6vw;
+  }
 }
 
 body {

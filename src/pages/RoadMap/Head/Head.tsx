@@ -16,7 +16,9 @@ const Head = () => {
         <h2 className="head__title">
           Road Map
           <br />
-          Solaris MetaVerse 2023-2024®
+          Solaris MetaVerse
+          <br />
+          2023-2024®
         </h2>
 
         <div className="head__phases">

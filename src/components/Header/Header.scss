@@ -12,6 +12,10 @@
   right: 0;
   z-index: 1000;
 
+  @include mq() {
+    height: 10vw;
+  }
+
   &__navigation {
   height: 100%;
   display: flex;

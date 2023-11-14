@@ -7,7 +7,7 @@ const AboutProject = () => {
     <section id="about-project">
       <FullWidthBg
         type='video'
-        url={'AboutVideo'}
+        url={AboutVideo}
         customClass="about_project" 
       >
         <div className="about_project__text">  

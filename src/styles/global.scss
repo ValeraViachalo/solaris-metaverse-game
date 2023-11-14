@@ -5,7 +5,11 @@
 
 body {
   color: $white;
-  max-width: 1440px;
-  margin: 0 auto !important;
   @extend %body-text;
+  -ms-overflow-style: none;
+  scrollbar-width: none;  
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

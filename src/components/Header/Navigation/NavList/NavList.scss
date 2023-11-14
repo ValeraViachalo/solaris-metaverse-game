@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 110px 40px 50px 40px;
+  padding: 9vh 4vw 3vh 2vw;
   height: 100%;
   box-sizing: border-box;
 
@@ -24,7 +24,8 @@
     color: black;
     cursor: pointer;
     @include hoverForLinks($black, $white);
-    padding: 10px 6px;
+    padding: 1.5vw 6px;
+    text-wrap: nowrap;
 
     &_item {
       position: relative;

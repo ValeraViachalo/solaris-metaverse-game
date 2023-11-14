@@ -5,16 +5,15 @@
   left: 6vw;
   
   &__menu {
-    width: 480px;
-    height: 650px;
     background-color: #fff;
     position: absolute;
     z-index: 20;
   }
 
   &__button {
-    width: 100px;
-    height: 90px;
+    width: 10vw;
+    height: 7vw;
+    font-size: 2vw;
     cursor: pointer;
     overflow: hidden;
     position: relative;

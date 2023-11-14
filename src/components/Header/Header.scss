@@ -5,7 +5,12 @@
   align-items: center;
   justify-content: space-between;
   background-color: $black;
-  height: 90px;
+  height: 7vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1000;
 
   &__navigation {
   height: 100%;
@@ -24,7 +29,7 @@
   }
   
   &__link {
-    padding: 28px 10px;
+    padding: 2.2vw 2.2vw;
     display: block;
     color: $white;
     @include hoverForLinks($white)

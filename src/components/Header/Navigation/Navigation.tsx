@@ -11,14 +11,18 @@ type BtnProps = {
 
 const menu = {
   open: {
-    width: "380px",
-    height: "600px",
-    left: -40,
-    transition: { duration: 0.7, type: "tween", ease: [0.76, 0, 0.24, 1] },
+    width: "26vw",
+    height: "max-content",
+    left: '-1.6vw',
+    transition: {
+      duration: 0.7,
+      type: "tween",
+      ease: [0.76, 0, 0.24, 1]
+    },
   },
   closed: {
-    width: "100px",
-    height: "90px",
+    width: "6vw",
+    height: "7vw",
     transition: {
       duration: 0.7,
       delay: 0.35,

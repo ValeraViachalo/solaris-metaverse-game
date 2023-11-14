@@ -3,7 +3,6 @@ import AnchorLink from '../../../components/AnchorLink/AnchorLink';
 import HeroImage from '../../../images/hero/backgroung.jpg'
 
 import "./Hero.scss";
-import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (

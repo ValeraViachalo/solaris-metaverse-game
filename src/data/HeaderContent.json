@@ -17,7 +17,7 @@
   {
     "title": "Collection",
     "link": "https://opensea.io/collection/slm-collection",
-    "type": ""
+    "type": "link"
   },
   {
     "title": "Marketplace",
@@ -25,7 +25,7 @@
     "type": "link"
   },
   {
-    "title": "White Papeper",
+    "title": "White Paper",
     "link": "#",
     "type": ""
   }

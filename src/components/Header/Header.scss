@@ -17,11 +17,11 @@
   }
 
   &__navigation {
-  height: 100%;
-  display: flex;
-  align-items: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
-  
+
   &__list {
     display: flex;
     padding: 0 12px;
@@ -31,12 +31,12 @@
       position: relative;
     }
   }
-  
+
   &__link {
+    font-size: 2.3vw;
     padding: 1.7vw 2.2vw;
     display: block;
     color: $white;
-    @include hoverForLinks($white)
+    @include hoverForLinks($white);
   }
 }
-

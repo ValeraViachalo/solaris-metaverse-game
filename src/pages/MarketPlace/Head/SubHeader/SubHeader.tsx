@@ -11,11 +11,11 @@ const menu = {
   open: {
     width: "max-content",
     height: "max-content",
-    left: '-1.6vw',
+    left: "-1.6vw",
     transition: {
       duration: 0.8,
       type: "tween",
-      ease: [0.76, 0, 0.24, 1]
+      ease: [0.76, 0, 0.24, 1],
     },
   },
   closed: {
@@ -28,8 +28,8 @@ const menu = {
       ease: [0.76, 0, 0.24, 1],
     },
     transitionEnd: {
-      display: 'none'
-    }
+      display: "none",
+    },
   },
 };
 
@@ -56,7 +56,7 @@ const SubHeader = () => {
       />
     </div>
   );
-}
+};
 
 const Button: FC<BtnProps> = ({ isActive, toggleMenu }) => {
   return (
@@ -93,58 +93,58 @@ const Button: FC<BtnProps> = ({ isActive, toggleMenu }) => {
 
 const Options = () => (
   <>
-        <ul className="subheader__list">
-              <li className="subheader__list_item">
-                <a href="/" className="bold subheader__link">
-                  Buy resources
-                </a>
-              </li>
-              <li className="subheader__list_item">
-                <a href="/" className="subheader__link">
-                  Buy weapons
-                </a>
-              </li>
-              <li className="subheader__list_item">
-                <a href="/" className="subheader__link">
-                  Buy a spaceship
-                </a>
-              </li>
-            </ul>
-            <ul className="subheader__list">
-              <li className="subheader__list_item">
-                <a href="/" className="bold subheader__link">
-                  Auction
-                </a>
-              </li>
-              <li className="subheader__list_item">
-                <a href="/" className="subheader__link">
-                  Dividends
-                </a>
-              </li>
-              <li className="subheader__list_item">
-                <a href="/" className="subheader__link">
-                  Sell
-                </a>
-              </li>
-            </ul>
-            <ul className="subheader__list">
-              <li className="subheader__list_item">
-                <a href="/" className="bold subheader__link">
-                  ACCESSORIES
-                </a>
-              </li>
-              <li className="subheader__list_item">
-                <a href="/" className="subheader__link">
-                  COMPANIONS
-                </a>
-              </li>
-              <li className="subheader__list_item">
-                <a href="/" className="subheader__link">
-                  COSMETICS
-                </a>
-              </li>
-            </ul>
-            </>
-)
+    <ul className="subheader__list">
+      <li className="subheader__list_item">
+        <a href="/" className="bold subheader__link">
+          Buy resources
+        </a>
+      </li>
+      <li className="subheader__list_item">
+        <a href="/" className="subheader__link">
+          Buy weapons
+        </a>
+      </li>
+      <li className="subheader__list_item">
+        <a href="/" className="subheader__link">
+          Buy a spaceship
+        </a>
+      </li>
+    </ul>
+    <ul className="subheader__list">
+      <li className="subheader__list_item">
+        <a href="/" className="bold subheader__link">
+          Auction
+        </a>
+      </li>
+      <li className="subheader__list_item">
+        <a href="/" className="subheader__link">
+          Dividends
+        </a>
+      </li>
+      <li className="subheader__list_item">
+        <a href="/" className="subheader__link">
+          Sell
+        </a>
+      </li>
+    </ul>
+    <ul className="subheader__list">
+      <li className="subheader__list_item">
+        <a href="/" className="bold subheader__link">
+          ACCESSORIES
+        </a>
+      </li>
+      <li className="subheader__list_item">
+        <a href="/" className="subheader__link">
+          COMPANIONS
+        </a>
+      </li>
+      <li className="subheader__list_item">
+        <a href="/" className="subheader__link">
+          COSMETICS
+        </a>
+      </li>
+    </ul>
+  </>
+);
 
 export default SubHeader;

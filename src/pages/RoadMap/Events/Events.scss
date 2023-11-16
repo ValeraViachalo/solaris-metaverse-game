@@ -4,12 +4,7 @@
   display: flex;
   align-items: center;
   height: 45vw;
-  background: 
-    linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0)
-    );
+  background: $shadow;
 
   @include mq() {
     height: 50vw;
@@ -36,6 +31,7 @@
   
   &__main_text {
     max-width: 24vw;
+    color: $light-cream;
 
     @include mq() {
       max-width: 80vw;
@@ -67,5 +63,16 @@
     @include mq($laptop) {
       font-size: 2rem;
     }
+  }
+}
+
+.footer {
+  &__title {
+    text-align: left;
+  }
+
+  &__text {
+    display: flex;
+    gap: 0.2vw;
   }
 }

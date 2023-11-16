@@ -40,11 +40,11 @@
     &:hover::after{
       height: 100%;
     }
-  }
-
-  @if($hoverTextColor != 'none') {
-    &:hover {
-      color: $hoverTextColor;
+    
+    @if($hoverTextColor != 'none') {
+      &:hover {
+        color: $hoverTextColor;
+      }
     }
   }
 }

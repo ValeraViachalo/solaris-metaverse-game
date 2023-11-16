@@ -1,6 +1,6 @@
 import FullWidthBg from "../../../components/FullWidthBg/FullWidthBg";
 import AnchorLink from '../../../components/AnchorLink/AnchorLink';
-import HeroImage from '../../../images/hero/backgroung.jpg'
+import HeroImage from '../../../images/home/backgroung.jpg'
 
 import "./Hero.scss";
 
@@ -51,19 +51,19 @@ const Hero = () => {
 
           <div className="about__buttons">
             <AnchorLink
-              toSection='about-project'
+              toSection='#about-project'
               customClass="about_link"
             >
               Game experience
             </AnchorLink>
             <AnchorLink
-              toSection='story'
+              toSection='#story'
               customClass="about_link"
             >
               Project information
             </AnchorLink>
             <AnchorLink
-              toSection=''
+              toSection='#leviathan'
               customClass="about_link_leviathan"
             >
               $100,000?

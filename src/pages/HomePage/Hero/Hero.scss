@@ -21,17 +21,19 @@
 
   &__download {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    gap: 2vw;
-
+    justify-self: center;
+    gap: 1.2vw;
     grid-row: 3/6;
-    grid-column: 2/7;
+    grid-column: 1/7;
 
     &_top {
       font-family: Din, sans-serif;
       font-weight: bold;
       color: $white;
       display: flex;
+      align-items: center;
       flex-direction: column;
       gap: 14px;
     }
@@ -42,14 +44,13 @@
 
       &_blur {
         color: $green-secondary;
-        margin-right: 1.5vw;
+        margin-right: 1vw;
         filter: blur(2px);
       }
     }
 
     &_sub_title {
       text-align: center;
-      align-self: flex-start;
       background: $golden;
       background-clip: text;
       -webkit-background-clip: text;
@@ -57,13 +58,15 @@
 
       grid-row: 3;
       grid-column: 1/2;
+
+      font-size: 2vw;
     }
 
     &_button {
       height: 80px;
       color: $white;
       text-transform: uppercase;
-      width: 21vw;
+      width: 98%;
       height: 5.5vw;
       background: linear-gradient(
         90deg,
@@ -87,9 +90,10 @@
   .about {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    grid-row: 3/6;
+    gap: 0.4vw;
+    grid-row: 2/7;
     grid-column: 10/14;
+    align-self: center;
 
     &_title {
       text-wrap: nowrap;
@@ -141,6 +145,19 @@
         }
       }
     }
+  }
+
+  &__bottom_text {
+    grid-row: 7/8;
+    grid-column: 1/15;
+    font-size: 4vw !important;
+    background: linear-gradient(180deg, rgba(175, 175, 175, 0.75) 0%, #FFF 94.79%, #FDFDFD 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke: 0.9px;
+    -webkit-text-stroke-color: $black;
   }
 
   .buttons {

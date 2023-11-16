@@ -106,7 +106,7 @@ const Technology: React.FC = () => {
   return (
     <section className="technology">
       <div className="technology__text">
-        <h2 className="technology__title">BASED ON BLOCKCHAIN ​​TECHNOLOGY</h2>
+        <h1 className="technology__title">BASED ON BLOCKCHAIN ​​TECHNOLOGY</h1>
         <div className="button-grid">
           {buttonData.map((button) => (
             <a

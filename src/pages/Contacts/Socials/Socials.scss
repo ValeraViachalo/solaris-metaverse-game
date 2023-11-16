@@ -30,17 +30,18 @@
     }
   }
 
-  &__item {
+  &__link {
     background-color: $white;
     color: $black;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  
-  &__link {
     padding: 1vw 5vw;
     line-height: 4vw;
     font-weight: bold;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $white;
+    }
 
     @include mq() {
       line-height: 8vw;

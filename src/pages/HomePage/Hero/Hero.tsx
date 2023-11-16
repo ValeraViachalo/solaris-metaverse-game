@@ -29,13 +29,14 @@ const Hero = () => {
           </div>
           
 
-          <button className="hero__download_button">Start the engine</button>
-
           <p className="bold hero__download_sub_title">
             WORLDWIDE RELEASE
             <br />
+            {" "}
             09.06.2024
           </p>
+
+          <button className="hero__download_button">Start the engine</button>
         </div>
 
         <div className="about">
@@ -71,6 +72,10 @@ const Hero = () => {
             </AnchorLink>
           </div>
         </div>
+
+        <h1 className="hero__bottom_text big-text">
+          ARE YOU READY FOR THE EVENT HORIZON?
+        </h1>
 
       </FullWidthBg>
     </section>

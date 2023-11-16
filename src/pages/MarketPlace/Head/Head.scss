@@ -1,0 +1,140 @@
+@import "../../../styles/global.scss";
+
+.head {
+  height: 634px;
+
+  &__body {
+    display: flex;
+    margin: 0 auto;
+
+    margin-top: 110px;
+
+    flex-wrap: wrap;
+    & h2 {
+      font-weight: bold;
+    }
+  }
+  &__expect {
+    display: flex;
+    flex-direction: column;
+    max-width: 564px;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  &__lock {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: flex-end;
+
+    &::after {
+      display: block;
+      content: "";
+      width: 52px;
+      height: 45.55px;
+      background-image: url("/images/MarketPlace/lock.svg");
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    max-width: 786px;
+    align-items: center;
+    text-align: center;
+    gap: 82px;
+    & h1 {
+      font-weight: bold;
+      text-transform: none;
+    }
+  }
+}
+
+.subheader {
+  display: none;
+  background-color: #000;
+  margin-top: 100px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7vw;
+  padding: 0 0 0 6vw;
+
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    &_item {
+      border-top: 1px solid $black;
+      position: relative;
+    }
+  }
+
+  &__link {
+    text-transform: none;
+    font-size: 20px;
+    text-align: center;
+
+    display: block;
+    color: $white;
+    @include hoverForLinks($white);
+  }
+}
+
+.temporarily {
+  display: flex;
+  gap: 20px;
+  padding: 18px 0;
+  background-color: #d9d9d9;
+  align-items: center;
+  justify-content: center;
+
+  &__cube {
+    display: flex;
+    width: 30px;
+    height: 30px;
+
+    border: 8px solid #232121;
+    background: rgba(217, 217, 217, 0);
+  }
+
+  & p {
+    color: #000;
+  }
+}
+.trading {
+  display: flex;
+  background-color: #232121;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 3vw;
+  &-text {
+    text-align: center;
+    padding: 6px 0;
+    font-size: 24px;
+    max-width: 770px;
+    border: 1px solid #fefefe;
+  }
+
+  &__partners {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    text-align: center;
+    row-gap: 0;
+    max-width: 256px;
+  }
+}

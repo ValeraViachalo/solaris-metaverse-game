@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import Home from './pages/HomePage/HomePage';
 import RoadMap from './pages/RoadMap/RoadMap';
 import Contacts from './pages/Contacts/Contacts';
+import MarketPlace from './pages/MarketPlace/MarketPlace';
 
 function App() {
   return (
@@ -26,6 +27,12 @@ function App() {
               path="contacts"
               element={<Contacts />}
             />
+
+            <Route 
+              path="marketplace"
+              element={<MarketPlace/>}
+            />
+            
           </Routes>
         </section>
       </main>

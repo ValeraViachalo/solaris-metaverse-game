@@ -1,0 +1,63 @@
+@import "../../../../styles/global.scss";
+
+.pop_up {
+  &__button {
+    background: url("../../../../images/home/pop_up.svg") center no-repeat;
+    background-size: cover;
+    width: 7.5vw;
+    height: 6vw;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    position: absolute;
+    left: 2vw;
+    top: 3vw;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__text {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    background-color: $dark-grey;
+    z-index: 12;
+    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+
+    @extend %link;
+    text-transform: none;
+  }
+
+  &__button_close {
+    position: absolute;
+    top: 3vw;
+    left: 3vw;
+    width: 3vw;
+    height: 3vw;
+    background: url("../../../../images/home/cross.svg") no-repeat center;
+    background-position: 0;
+    background-size: 80%;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__blur {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(128, 128, 128, 0.5); /* Сірий колір з прозорістю 50% */
+    filter: blur(6px);
+    z-index: 11;
+  }
+}

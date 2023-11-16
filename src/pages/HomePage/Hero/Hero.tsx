@@ -1,6 +1,7 @@
 import FullWidthBg from "../../../components/FullWidthBg/FullWidthBg";
 import AnchorLink from '../../../components/AnchorLink/AnchorLink';
 import HeroImage from '../../../images/home/backgroung.jpg'
+import PopUp from './PopUp/PopUp';
 
 import "./Hero.scss";
 
@@ -16,7 +17,7 @@ const Hero = () => {
           Connect MetaMask wallet and get 150$ols Token as a gift, which will be
           capitalized in 2024.
         </p>
-        <button className="hero__pop_up_button" />
+        <PopUp />
 
         <div className="hero__download">
           <div className="hero__download_top">

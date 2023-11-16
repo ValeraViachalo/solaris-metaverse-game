@@ -3,6 +3,7 @@ import ContactsHead from './Head/Head';
 import { AnimatePresence } from 'framer-motion';
 import Socials from './Socials/Socials';
 import Creators from './Creators/Creators';
+import { Transition } from '../../components/Transition/Transition'
 
 const Contacts = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,4 +28,6 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+const TransitionedContacts = Transition(Contacts);
+
+export default TransitionedContacts;

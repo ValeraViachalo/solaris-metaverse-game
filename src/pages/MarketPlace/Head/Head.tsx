@@ -41,64 +41,12 @@ const Head = () => {
   const partners = ["MEXC", "Binance", "Bybit", "PROJECT PARTNERS"];
 
   return (
-    <section>
+    <section className="marketplace">
       {true && (
         <div className="subheader">
-          <div className="subheader__logo">
-            <h2>MARCKETPLACE SMV</h2>
-          </div>
+          <h2 className="subheader__logo">MARCKETPLACE SMV</h2>
           <div className="subheader__menu">
-            <ul className="subheader__list">
-              <li className="subheader__list_item">
-                <a href="/" className="bold subheader__link">
-                  Buy resources
-                </a>
-              </li>
-              <li className="subheader__list_item">
-                <a href="/" className="subheader__link">
-                  Buy weapons
-                </a>
-              </li>
-              <li className="subheader__list_item">
-                <a href="/" className="subheader__link">
-                  Buy a spaceship
-                </a>
-              </li>
-            </ul>
-            <ul className="subheader__list">
-              <li className="subheader__list_item">
-                <a href="/" className="bold subheader__link">
-                  Auction
-                </a>
-              </li>
-              <li className="subheader__list_item">
-                <a href="/" className="subheader__link">
-                  Dividends
-                </a>
-              </li>
-              <li className="subheader__list_item">
-                <a href="/" className="subheader__link">
-                  Sell
-                </a>
-              </li>
-            </ul>
-            <ul className="subheader__list">
-              <li className="subheader__list_item">
-                <a href="/" className="bold subheader__link">
-                  ACCESSORIES
-                </a>
-              </li>
-              <li className="subheader__list_item">
-                <a href="/" className="subheader__link">
-                  COMPANIONS
-                </a>
-              </li>
-              <li className="subheader__list_item">
-                <a href="/" className="subheader__link">
-                  COSMETICS
-                </a>
-              </li>
-            </ul>
+         
             <button className="subheader__button" onClick={handleClick}>
               {buttonContent}
             </button>
@@ -120,31 +68,36 @@ const Head = () => {
             </div>
           </div>
           <div className="head__text">
-            <h1>{marketplaceData.description}</h1>
+            <h2>{marketplaceData.description}</h2>
             <h2>{marketplaceData.redemptionInfo}</h2>
           </div>
         </div>
-      </FullWidthBg>
-      <div className="temporarily">
-        <div className="temporarily__cube"></div>
-        <p>{marketplaceData.temporarily}</p>
-      </div>
-      <div className="trading">
-        <h3 className="trading-text">{marketplaceData.trading}</h3>
-        <div className="trading__partners">
-          {partners.map((partner, index) => (
-            <div
-              key={index}
-              className={`partner ${
-                index === partners.length - 1 ? "small-text" : ""
-              }`}
-              style={index === partners.length - 1 ? { margin: "0 auto" } : {}}
-            >
-              {partner}
-            </div>
-          ))}
+  
+      
+      <div className="marketplace_bottom">
+        <div className="temporarily">
+          <div className="temporarily__cube"></div>
+          <p>{marketplaceData.temporarily}</p>
+        </div>
+
+        <div className="trading">
+          <h3 className="trading-text">{marketplaceData.trading}</h3>
+          <div className="trading__partners">
+            {partners.map((partner, index) => (
+              <div
+                key={index}
+                className={`partner ${
+                  index === partners.length - 1 ? "small-text" : ""
+                }`}
+                style={index === partners.length - 1 ? { margin: "0 auto" } : {}}
+              >
+                {partner}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+      </FullWidthBg>
     </section>
   );
 };

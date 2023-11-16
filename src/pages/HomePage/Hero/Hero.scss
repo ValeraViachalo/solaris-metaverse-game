@@ -19,22 +19,6 @@
     -webkit-text-fill-color: transparent;
   }
 
-  &__pop_up_button {
-    background-color: $green-secondary;
-    width: 7.5vw;
-    height: 6vw;
-
-    transition: all 0.2s ease;
-
-    position: absolute;
-    left: 2vw;
-    top: 3vw;
-
-    &:hover {
-      opacity: 0.5;
-    }
-  }
-
   &__download {
     display: flex;
     flex-direction: column;

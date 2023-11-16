@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-  HashRouter as Router, // before deploying use just router
+  Route,
+  BrowserRouter as Router, Routes, // before deploying use just router
 } from 'react-router-dom';
 import './styles/reset.scss';
 import App from './App';
@@ -14,7 +15,9 @@ root.render(
   <React.StrictMode>
     <Router>
       <ScrollProvider>
-        <App />
+        <Routes>
+          <Route path='/*' element={<App />} />
+        </Routes>
       </ScrollProvider>
     </Router>
   </React.StrictMode>

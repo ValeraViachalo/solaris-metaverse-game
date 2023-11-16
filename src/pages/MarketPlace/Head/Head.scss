@@ -1,26 +1,38 @@
 @import "../../../styles/global.scss";
 
-.head {
-  height: 634px;
+.marketplace {
+  position: relative;
+  height: 68vw;
 
+  &_bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.head {
   &__body {
     display: flex;
     margin: 0 auto;
 
-    margin-top: 110px;
+    margin-top: 15vw;
 
     flex-wrap: wrap;
     & h2 {
+      font-size: 2vw;
       font-weight: bold;
     }
   }
   &__expect {
     display: flex;
     flex-direction: column;
-    max-width: 564px;
+    max-width: 40vw;
     align-items: center;
     text-align: center;
     gap: 40px;
+    margin-right: 4vw;
   }
 
   &__lock {
@@ -42,10 +54,11 @@
   &__text {
     display: flex;
     flex-direction: column;
-    max-width: 786px;
+    max-width: 45vw;
     align-items: center;
     text-align: center;
     gap: 82px;
+
     & h1 {
       font-weight: bold;
       text-transform: none;
@@ -55,40 +68,43 @@
 
 .subheader {
   display: none;
-  background-color: #000;
-  margin-top: 100px;
-
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+
+  background-color: #000;
+  
+  margin-top: 6vw;
   height: 7vw;
-  padding: 0 0 0 6vw;
+  padding: 0 2vw;
 
   &__menu {
     display: flex;
     align-items: center;
+    gap: 0.5vw;
   }
 
   &__logo {
-    height: 100%;
     display: flex;
     align-items: center;
+    font-size: 2vw;
+    text-wrap: nowrap;
+
+    border-right: 0.2vw solid $white;
+    padding-right: 1.5vw;
+    margin-right: 1.5vw;
   }
 
   &__list {
     display: flex;
-    &_item {
-      border-top: 1px solid $black;
-      position: relative;
-    }
+    gap: 1vw;
   }
 
   &__link {
     text-transform: none;
-    font-size: 20px;
+    font-size: 1.5vw;
     text-align: center;
 
-    display: block;
+    text-wrap: nowrap;
+    padding: 0.3vw;
     color: $white;
     @include hoverForLinks($white);
   }
@@ -107,34 +123,35 @@
     width: 30px;
     height: 30px;
 
-    border: 8px solid #232121;
+    border: 8px solid $dark-grey;
     background: rgba(217, 217, 217, 0);
   }
 
   & p {
-    color: #000;
+    color: $black;
   }
 }
 .trading {
   display: flex;
-  background-color: #232121;
+  background-color: $dark-grey;
   align-items: center;
   justify-content: space-between;
   padding: 15px 3vw;
+  
   &-text {
     text-align: center;
-    padding: 6px 0;
-    font-size: 24px;
-    max-width: 770px;
+    padding: 0.6vw;
+    font-size: 1vw;
+    max-width: 30vw;
     border: 1px solid #fefefe;
   }
 
   &__partners {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    justify-content: center;
+    gap: 0.3vw 1vw;
     text-align: center;
-    row-gap: 0;
-    max-width: 256px;
+    max-width: 20vw;
   }
 }

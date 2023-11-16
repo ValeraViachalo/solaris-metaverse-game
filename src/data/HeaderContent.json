@@ -1,8 +1,8 @@
 [
   {
     "title": "About Us",
-    "link": "#",
-    "type": ""
+    "link": "/",
+    "type": "link"
   },
   {
     "title": "Contacts",

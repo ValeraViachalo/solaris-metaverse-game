@@ -36,6 +36,7 @@ function NavList({ setIsActive }) {
                     href={link}
                     className="nav__link_item"
                     onClick={() => setIsActive(false)}
+                    target="_blank"
                   >
                     {title}
                   </a>

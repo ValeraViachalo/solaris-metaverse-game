@@ -28,14 +28,14 @@
   &__link {
     color: black;
     cursor: pointer;
-    padding: 1.5vw 0.6vw;
     text-wrap: nowrap;
-
+    
     @include hoverForLinks($black, $white);
-
+    
     &_item {
+      padding: 1.5vw 0.6vw;
       position: relative;
-      z-index: 1000;
+      z-index: 10;
       display: block;
     }
   }

@@ -5,7 +5,7 @@ import Socials from './Socials/Socials';
 import Creators from './Creators/Creators';
 
 const Contacts = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <main>
@@ -14,11 +14,15 @@ const Contacts = () => {
         setIsOpen={setIsOpen}
       />
 
-      <Socials isOpen={isOpen}></Socials>
-      <Creators />
-      {/* <AnimatePresence>
-        {isOpen && <Socials isOpen={isOpen}/>}
-      </AnimatePresence> */}
+      
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            <Socials isOpen={isOpen} />
+            <Creators />
+          </>
+        )}
+      </AnimatePresence>
     </main>
   );
 };

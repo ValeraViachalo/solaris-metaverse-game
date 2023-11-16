@@ -8,6 +8,22 @@
   color: $black;
   padding: 4vw 0;
 
+  @include mq($tablet-large) {
+    padding: 7vw 0;
+  }
+
+  &__lists {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+
+    @include mq($tablet-large) {
+      gap: 8vw;
+      text-align: center;
+      font-size: 4vw;
+    }
+  }
+
   &__title {
     text-align: center;
     color: $orange;
@@ -15,6 +31,10 @@
 
   &__list_title {
     font-style: italic;
+
+    @include mq($tablet-large) {
+      text-align: center;
+    }
   }
 
   &__sub_title {
@@ -25,6 +45,11 @@
     letter-spacing: 1.12px;
     max-width: 50vw;
     margin: 0 auto;
+
+    @include mq($tablet-large) {
+      max-width: none;
+      margin: 3vw 0;
+    }
   }
 
   &_leaders {
@@ -40,6 +65,70 @@
 
     &:not(:last-child) {
       border-bottom: 0.1vw solid $black;
+    }
+
+    @include mq($tablet-large) {
+      max-width: none;
+      padding: 3vw 0;
+      font-size: 4vw;
+    }
+  }
+
+  &_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+
+    @include mq($tablet-large) {
+      align-items: center;
+      gap: 6vw;
+      font-size: 4vw;
+    }
+
+    &__title {
+      text-align: left;
+
+      @include mq($tablet-large) {
+        font-size: 5vw;
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      max-width: 50vw;
+      gap: 1.5vw;
+      
+      @include mq($tablet-large) {
+        max-width: none;
+        
+      }
+
+      &_first {
+        max-width: 41vw;
+        font-style: italic;
+
+        @include mq($tablet-large) {
+          max-width: none;
+          gap: 4vw;
+        }
+      }
+    }
+
+    &__link {
+      display: block;
+      max-width: fit-content;
+      padding: 1vw;
+      text-transform: none;
+      font-weight: bold;
+      color: $white;
+      background-color: $black;
+
+      @include hoverForLinks($cream, $black);
+
+      @include mq($tablet-large) {
+        font-size: 4vw;
+      }
     }
   }
 }

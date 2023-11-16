@@ -1,19 +1,6 @@
 import "./Footer.scss"
 
-const FooterLinks = [
-  {
-    "title": "TERMS OF SERVICE",
-    "link": "",
-  },
-  {
-    "title": "COOKIE POLICY",
-    "link": "",
-  },
-  {
-    "title": "LEGAL INFORMATION",
-    "link": "",
-  }
-]
+import FooterLinks from '../../../data/FooterLinks.json'
 
 const Footer = () => {
   return (

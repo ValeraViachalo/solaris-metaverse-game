@@ -1,6 +1,12 @@
+@import "../../../styles/global.scss";
+
 .about_project {
-  height: 730px;
   position: relative;
+  height: 40vw;
+
+  @include mq() {
+    height: 80vw;
+  }
   
   &__text {
     position: absolute;

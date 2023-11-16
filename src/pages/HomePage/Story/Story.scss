@@ -1,6 +1,12 @@
+@import "../../../styles/global.scss";
+
 .story {
-  height: 790px;
   position: relative;
+  height: 40vw;
+
+  @include mq() {
+    height: 80vw;
+  }
   
   &__text {
     position: absolute;

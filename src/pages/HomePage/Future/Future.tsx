@@ -10,10 +10,11 @@ const Future = () => {
       <FullWidthBg
         type='image'
         url={FutureImage}
-        customClass="future"  
+        classSection="future"
+        customClass="future__image"
       >
-        <div className="text">  
-          <h2 className="big-text future__title">EXPERIENCE OF THE FUTURE </h2>
+        <div className="future__text">  
+          <h1 className="future__title">EXPERIENCE OF THE FUTURE </h1>
           <p>
           Solaris is a blockchain-based meta-universe that has huge potential to grow and attract millions of users from around the world.  Solaris is a unique combination of gameplay, blockchain and token economy with the ability to earn money through pools and in-game activities, SMV promises to be one of the most popular and innovative crypto-games on the market in 2024.
           </p>

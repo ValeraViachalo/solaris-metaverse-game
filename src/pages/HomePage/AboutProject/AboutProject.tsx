@@ -8,7 +8,8 @@ const AboutProject = () => {
       <FullWidthBg
         type='video'
         url={AboutVideo}
-        customClass="about_project" 
+        customClass="about_project__image" 
+        classSection="about_project" 
       >
         <div className="about_project__text">  
           <h2 className="bold">EXPLORE OUTER SPACE</h2>

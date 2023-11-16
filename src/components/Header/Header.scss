@@ -5,12 +5,12 @@
   align-items: center;
   justify-content: space-between;
   background-color: $black;
-  height: 7vw;
+  height: 6vw;
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 10;
 
   @include mq() {
     height: 10vw;
@@ -33,7 +33,7 @@
   }
   
   &__link {
-    padding: 2.2vw 2.2vw;
+    padding: 1.7vw 2.2vw;
     display: block;
     color: $white;
     @include hoverForLinks($white)

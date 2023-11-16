@@ -8,8 +8,7 @@ const section = {
   open: {
     display: 'block',
     top: '-20vh',
-    width: "100%",
-    transition: { duration: 0.7, type: "tween", ease: [0.76, 0, 0.24, 1] },
+    transition: { duration: 0.8, type: "tween", ease: [0.53, -0.01, 0.33, 1.03] },
     transform: 'none',
     left: '0'
   },
@@ -46,6 +45,7 @@ const Socials: FC<Props> = ({ isOpen }) => {
                 <a
                   className="socials__link"
                   href={link}
+                  target="_blank"
                 >
                   {title}
                 </a>

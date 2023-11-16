@@ -1,3 +1,4 @@
+
 import { Routes, Route, Navigate } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Header from "./components/Header/Header";
@@ -6,7 +7,6 @@ import RoadMap from "./pages/RoadMap/RoadMap";
 import Contacts from "./pages/Contacts/Contacts";
 import TransitionedHome from './pages/HomePage/HomePage';
 import TransitionedRoadMap from './pages/RoadMap/RoadMap';
-
 
 function App() {
   return (
@@ -39,6 +39,12 @@ function App() {
               path="contacts"
               element={<Contacts />}
             />
+
+            <Route 
+              path="marketplace"
+              element={<MarketPlace/>}
+            />
+            
           </Routes>
         </section>
       </main>

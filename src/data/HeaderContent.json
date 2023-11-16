@@ -21,8 +21,8 @@
   },
   {
     "title": "Marketplace",
-    "link": "#",
-    "type": ""
+    "link": "marketplace",
+    "type": "link"
   },
   {
     "title": "White Papeper",

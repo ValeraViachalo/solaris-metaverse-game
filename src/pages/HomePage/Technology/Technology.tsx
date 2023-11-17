@@ -116,8 +116,8 @@ const Technology: React.FC = () => {
               onMouseEnter={() => handleHover(button.id)}
               onMouseLeave={() => handleLeave(button.id)}
             >
-              <img src={button.svg} alt={button.name} />
               {button.name}
+              <img src={button.svg} alt={button.name} />
             </a>
           ))}
         </div>

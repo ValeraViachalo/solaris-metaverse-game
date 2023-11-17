@@ -42,7 +42,6 @@
 .button-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.4vw;
 
   & a {
     display: flex;

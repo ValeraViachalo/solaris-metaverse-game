@@ -1,6 +1,10 @@
+import { useEffect } from 'react';
 import './Creators.scss';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
 
 const Creators = () => {
+
   return (
     <section className="creators">
       <div className="container">

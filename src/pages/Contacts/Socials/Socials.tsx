@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
-import React, { useState, FC } from "react";
+import React, { useState, FC, useEffect } from "react";
 
 import "./Socials.scss";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+
 
 interface Button {
   id: number;

@@ -8,6 +8,7 @@ import { Transition } from '../../components/Transition/Transition'
 const Contacts = () => {
   const [isOpen, setIsOpen] = useState(false);
   const isPresent = useIsPresent();
+  
 
   return (
     <>

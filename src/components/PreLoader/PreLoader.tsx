@@ -24,7 +24,6 @@ const PreLoader: FC<Props> = ({ isLoading }) => {
   return (
     <div className="preloader">
       <div className="preloader__blind" ref={blind1}/>
-      <div className="preloader__blind" ref={blind2}/>
     </div>
   );
 };

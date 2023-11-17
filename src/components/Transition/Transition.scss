@@ -1,36 +1,11 @@
 @import "../../styles/global.scss";
 
 .slide-in {
-  position: fixed;
+  position: absolute;
   top: 0;
-  width: 50%;
-  height: 100vh;
-  z-index: 9;
+  bottom: 0;
+  left: 0;
+  right: 0%;
+  z-index: 100;
   background-color: $dark-grey;
-  transform-origin: bottom;
-
-  &-1 {
-    left: 0;
-  }
-
-  &-2 {
-    right: 0;
-  }
-}
-.slide-out {
-  position: fixed;
-  top: 0;
-  width: 50%;
-  height: 100vh;
-  z-index: 9;
-  background-color: $dark-grey;
-  transform-origin: top;
-
-  &-1 {
-    left: 0;
-  }
-
-  &-2 {
-    right: 0;
-  }
 }

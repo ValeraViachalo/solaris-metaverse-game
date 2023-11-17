@@ -8,22 +8,27 @@ import AboutGame from "./AboutGame/AboutGame";
 import Leviathan from "./Leviathans/Leviathan";
 import { Transition } from "../../components/Transition/Transition";
 import Technology from "./Technology/Technology";
+import { useIsPresent } from 'framer-motion';
 
 function Home() {
+  const isPresent = useIsPresent();
+
   return (
-    <main>
-      <Hero />
-      <Technology />
-      <Future />
-      <Download />
-      <AboutProject />
-      <AboutGame />
-      <Story />
-      <Leviathan />
-    </main>
+    <>
+      <main>
+        <Hero />
+        <Technology />
+        <Future />
+        <Download />
+        <AboutProject />
+        <AboutGame />
+        <Story />
+        <Leviathan />
+      </main>
+
+      <Transition isPresent={isPresent}/>
+    </>
   );
 }
 
-const TransitionedHome = Transition(Home);
-
-export default TransitionedHome;
+export default Home;

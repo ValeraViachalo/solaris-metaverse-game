@@ -1,15 +1,20 @@
 import Head from "./Head/Head";
 import { Transition } from '../../components/Transition/Transition';
+import { useIsPresent } from 'framer-motion';
 
 const MarketPlace = () => {
+  const isPresent = useIsPresent();
+
   return (
-    <main>
-      <Head />
-    </main>
+    <>
+      <main>
+        <Head />
+      </main>
+
+      <Transition isPresent={isPresent}/>
+    </>
   );
 };
 
-const TransitionedMarketPlace = Transition(MarketPlace);
-
-export default TransitionedMarketPlace;
+export default MarketPlace;
 

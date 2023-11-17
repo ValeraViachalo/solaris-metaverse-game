@@ -23,7 +23,7 @@ function NavList({ setIsActive }) {
                 animate="enter"
                 exit="exit"
               >
-                {type === 'link' ? (
+                {type === 'section-link' ? (
                   <Link
                     to={link}
                     className="nav__link_item"
@@ -34,9 +34,9 @@ function NavList({ setIsActive }) {
                 ) : (
                   <a 
                     href={link}
-                    className="nav__link_item"
-                    onClick={() => setIsActive(false)}
                     target="_blank"
+                    className="nav__link_item"
+                    onClick={() => setIsActive(false)} rel="noreferrer"
                   >
                     {title}
                   </a>

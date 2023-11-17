@@ -2,17 +2,17 @@
   {
     "title": "About Us",
     "link": "/",
-    "type": "link"
+    "type": "section-link"
   },
   {
     "title": "Contacts",
     "link": "contacts",
-    "type": "link"
+    "type": "section-link"
   },
   {
     "title": "Road Map",
     "link": "roadmap",
-    "type": "link"
+    "type": "section-link"
   },
   {
     "title": "Collection",
@@ -22,11 +22,11 @@
   {
     "title": "Marketplace",
     "link": "marketplace",
-    "type": "link"
+    "type": "section-link"
   },
   {
     "title": "White Paper",
     "link": "#",
-    "type": ""
+    "type": "link"
   }
 ]

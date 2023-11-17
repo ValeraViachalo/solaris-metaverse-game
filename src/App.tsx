@@ -5,10 +5,32 @@ import Home from './pages/HomePage/HomePage';
 import RoadMap from './pages/RoadMap/RoadMap';
 import Contacts from './pages/Contacts/Contacts';
 import MarketPlace from './pages/MarketPlace/MarketPlace';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import PreLoader from './components/PreLoader/PreLoader';
 
 
 function App() {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
+
+  useEffect(() => {
+    window.onload = () => {
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        setIsLoaded(true);
+        document.body.style.cursor = "default";        
+      }, 2000);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isLoaded) {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+    }
+}, [isLoaded]);
+
   const element = useRoutes([
     {
       path: "/",
@@ -33,16 +55,19 @@ function App() {
   if (!element) return null
 
   return (
-    <main className="app">
-        <Header />
+    <>
+      {isLoading && (<PreLoader isLoading={isLoaded}/>)}
+      <main className="app">
+          <Header />
 
-        <section className="app__section">
-        <AnimatePresence mode="wait" initial={false}>
-          {React.cloneElement(element, { key: location.pathname })}
-        </AnimatePresence>
-          
-        </section>
-      </main>
+          <section className="app__section">
+          <AnimatePresence mode="wait" initial={false}>
+            {React.cloneElement(element, { key: location.pathname })}
+          </AnimatePresence>
+            
+          </section>
+        </main>
+    </>
   );
 }
 

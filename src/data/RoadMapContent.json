@@ -1,22 +1,22 @@
 [
   {
     "title": "Event Invasion",
-    "href" : "#invasion"
+    "href": "#invasion"
   },
   {
     "title": "New Year's event",
-    "href" : "#new-year"
+    "href": "#new-year"
   },
   {
     "title": "Pet",
-    "href" : "#pet"
+    "href": "#pet"
   },
   {
     "title": "Marketplace",
-    "href" : "/"
+    "href": "marketplace"
   },
   {
     "title": "Release",
-    "href" : "/"
+    "href": "/"
   }
 ]

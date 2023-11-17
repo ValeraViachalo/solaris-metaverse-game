@@ -7,7 +7,7 @@ import "./Hero.scss";
 
 const Hero = () => {
   return (
-    <section>
+    <section id="hero">
       <FullWidthBg
         url={HeroImage}
         alt="hero"

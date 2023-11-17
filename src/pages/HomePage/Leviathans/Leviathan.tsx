@@ -1,6 +1,7 @@
 import FullWidthBg from '../../../components/FullWidthBg/FullWidthBg';
 import FooterLinks from '../../../data/FooterLinks.json'
 import leviathanBg from '../../../images/home/leviathan/leviathan-bg.jpg'
+import AnchorLink from '../../../components/AnchorLink/AnchorLink';
 
 import leviathan1 from '../../../images/home/leviathan/lev1.png';
 import leviathan2 from '../../../images/home/leviathan/lev2.png';
@@ -108,6 +109,12 @@ const Leviathan = () => {
       </div>
 
         <div className="leviathan__bottom footer__bottom small-text">
+          <AnchorLink
+            customClass="leviathan__to_top"
+            toSection="#hero"
+          >
+            HOME
+          </AnchorLink>
         <p>
           Trademarks belong to their respective owners. All Rights Reserved.
         </p>

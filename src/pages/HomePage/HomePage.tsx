@@ -1,5 +1,5 @@
 "use client";
-import Hero from "./Hero/Hero";
+import Hero from "./Hero1/Hero";
 import Future from "./Future/Future";
 import Download from "./Download/Download";
 import AboutProject from "./AboutProject/AboutProject";

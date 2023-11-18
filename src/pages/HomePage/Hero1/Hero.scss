@@ -1,0 +1,66 @@
+@import "../../../styles/global.scss";
+
+.hero {
+  position: relative;
+  height: 100vh;
+
+  &__under_header {
+    position: absolute;
+    right: 3vw;
+    top: 4.4vw;
+    text-align: center;
+    background: $golden;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 32vw;
+    z-index: 1;
+  }
+
+  .about {
+    position: absolute;
+    left: 5vw;
+    bottom: 10vw;
+    z-index: 1;
+    display: block;
+    flex-direction: column;
+    gap: 1.8vw;
+
+    &_title {
+      text-wrap: nowrap;
+    }
+    
+    &_sub_title {
+      background: $golden;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      grid-row: 3;
+      grid-column: 1/2;
+    }
+  }
+}
+
+.paralax {
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  &__top {
+    top: 0;
+    height: 86vh;
+    width: 100vw;
+    background: url("../../../images/home/hero-part-1.png") no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  &__bottom {
+    background: url("../../../images/home/hero-part-2.png") no-repeat center;
+    bottom: -6%;
+    height: 60%;
+    background-size: cover;
+    z-index: 0;
+  }
+}

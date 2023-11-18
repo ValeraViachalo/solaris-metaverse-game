@@ -1,5 +1,5 @@
 import "./Download.scss";
-import pdf from "../../../pdf/Docs.pdf";
+import pdf from "../../../pdf/Application form.doc";
 
 const Download = () => {
   return (

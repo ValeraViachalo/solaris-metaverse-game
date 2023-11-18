@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { perspective } from "./anim";
 import HeaderContent from "../../../../data/HeaderContent.json";
 import { Link } from "react-router-dom";
+import { pdf } from "../../../../pdf/pdf";
 
 function NavList({ setIsActive }) {
   return (
@@ -33,9 +34,10 @@ function NavList({ setIsActive }) {
                   </Link>
                 ) : type === "download" ? (
                   <a
-                    href={link}
+                    href={pdf(title)}
                     className="nav__link_item"
                     download
+                    
                   >
                     {title}
                   </a>

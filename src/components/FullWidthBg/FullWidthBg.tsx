@@ -43,6 +43,7 @@ const FullWidthBg = forwardRef<HTMLDivElement, Props>(({
           src={url}
           alt={alt ? alt : 'background'}
           className={classForBg}
+          loading="lazy"
         />
       )}
 
@@ -50,7 +51,5 @@ const FullWidthBg = forwardRef<HTMLDivElement, Props>(({
     </div>
   );
 });
-
-FullWidthBg.displayName = 'FullWidthBg';
 
 export default FullWidthBg;

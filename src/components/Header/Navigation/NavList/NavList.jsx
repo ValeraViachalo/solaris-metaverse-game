@@ -11,7 +11,10 @@ function NavList({ setIsActive }) {
         {HeaderContent.map((currentLink, i) => {
           const { title, link, type } = currentLink;
           return (
-            <div key={`b_${i}`} className="nav__linkContainer">
+            <div
+              key={`b_${i}`}
+              className="nav__linkContainer"
+            >
               <motion.div
                 className="nav__link"
                 custom={i}
@@ -28,6 +31,14 @@ function NavList({ setIsActive }) {
                   >
                     {title}
                   </Link>
+                ) : type === "download" ? (
+                  <a
+                    href={link}
+                    className="nav__link_item"
+                    download
+                  >
+                    {title}
+                  </a>
                 ) : (
                   <a
                     href={link}

@@ -1,4 +1,5 @@
 import "./Download.scss";
+import pdf from "../../../pdf/Docs.pdf";
 
 const Download = () => {
   return (
@@ -8,10 +9,7 @@ const Download = () => {
           Do you want to take part in the closed beta testing of the Solaris
           MetaVerse?
         </h2>
-        <a
-          href="https://docs.google.com/document/d/1UFMWkOI9SPLL8iSxf1wh8OpVTH4EG3ag/edit?usp=sharing&ouid=101690854080084727154&rtpof=true&sd=true"
-          download
-        >
+        <a href={pdf} download>
           FILL IN THE FORM
         </a>
         <p>Please download PDF</p>

@@ -11,10 +11,7 @@ function NavList({ setIsActive }) {
         {HeaderContent.map((currentLink, i) => {
           const { title, link, type } = currentLink;
           return (
-            <div
-              key={`b_${i}`}
-              className="nav__linkContainer"
-            >
+            <div key={`b_${i}`} className="nav__linkContainer">
               <motion.div
                 className="nav__link"
                 custom={i}
@@ -23,7 +20,7 @@ function NavList({ setIsActive }) {
                 animate="enter"
                 exit="exit"
               >
-                {type === 'section-link' ? (
+                {type === "section-link" ? (
                   <Link
                     to={link}
                     className="nav__link_item"
@@ -32,11 +29,12 @@ function NavList({ setIsActive }) {
                     {title}
                   </Link>
                 ) : (
-                  <a 
+                  <a
                     href={link}
                     target="_blank"
                     className="nav__link_item"
-                    onClick={() => setIsActive(false)} rel="noreferrer"
+                    onClick={() => setIsActive(false)}
+                    rel="noreferrer"
                   >
                     {title}
                   </a>

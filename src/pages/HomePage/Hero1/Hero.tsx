@@ -54,7 +54,6 @@ const ParalaxBackground = () => {
           start: 'top top',
           end: 'bottom center',
           scrub: 0.001,
-          markers: true,
         }
       })
       .to('.paralax__bottom', {
@@ -67,6 +66,16 @@ const ParalaxBackground = () => {
   return (
     <>
       <div className="paralax paralax__top" />
+        <h1 className="paralax__text">
+          <span>
+            Solaris
+            <br />
+            metave
+          </span>
+          <span>
+            rse
+          </span>
+        </h1>
       <div className="paralax paralax__bottom" />
     </>
   )

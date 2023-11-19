@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import SubHeaderMenu from '../../../../data/SubHeaderMenu.json'
 import "./SubHeader.scss";
@@ -33,10 +33,21 @@ const subMenuAnimate = {
 
 const SubHeader = () => {
   const [isClicked, setIsClicked] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(-1);
 
   const handleClick = () => {
     setIsClicked(!isClicked);
   };
+
+  const toggleMouseMenu = (index: number) => {
+    setActiveMenu(activeMenu === index ? -1 : index);
+  };
+
+  const toggleOnClick = (index: number) => {
+    if(activeMenu) {
+      setActiveMenu(activeMenu === index ? -1 : index);
+    }
+  }
 
   const buttonContent = isClicked ? "**********" : "0.86908862 ETH";
 
@@ -45,7 +56,15 @@ const SubHeader = () => {
     <div className="subheader__menu">
       <h2 className="subheader__logo">MARCKETPLACE SMV</h2>
       {SubHeaderMenu.map((currentCategory, i) => (
-        <Menu title={currentCategory.title} key={i} links={currentCategory.links}/>
+        <Menu
+          title={currentCategory.title}
+          key={i}
+          links={currentCategory.links}
+          isActive={i === activeMenu}
+          handleMouseEnter={() => toggleMouseMenu(i)}
+          handleMouseLeave={() => toggleMouseMenu(-1)}
+          handleOnClick={() => toggleOnClick(i)}
+        />
       ))}
     </div>
       <div
@@ -85,42 +104,58 @@ type MenuProps = {
     text: string,
     path: string
   }[]
+  isActive: boolean
+  handleMouseEnter: () => void
+  handleMouseLeave: () => void
+  handleOnClick: () => void
 }
 
-const Menu: FC<MenuProps> = ({title, links}) => {
-  const [isActiveMenu, setIsActiveMenu] = useState(false);
+const Menu: FC<MenuProps> = ({title, links, isActive, handleMouseEnter, handleMouseLeave, handleOnClick}) => {
+  const [clickedIndex, setClickedIndex] = useState(-1);
 
-  const toggleMouseMenu = () => {
-    setIsActiveMenu(!isActiveMenu);
-  };
+  useEffect(() => {
+    if(clickedIndex !== -1) {
+      const timer = setTimeout(() => {
+        setClickedIndex(-1);
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [clickedIndex]);
 
   return (
     <div
       className="menu"
-      onMouseEnter={toggleMouseMenu}
-      onMouseLeave={toggleMouseMenu}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onClick={handleOnClick}
     >
       <div className={classNames('bold', 'menu__title',
-        { 'menu__title--active': isActiveMenu }
+        { 'menu__title--active': isActive }
       )}>
         {title}
       </div>
       <motion.ul
         className="menu__list"
         variants={menuAnim}
-        animate={isActiveMenu ? "open" : "closed"}
+        animate={isActive ? "open" : "closed"}
         initial="closed"
       >
-        {links.map(currentLink => (
+        {links.map((currentLink, index) => {
+          const handleMenuItem = () => {
+            setClickedIndex(index);
+          };
+
+          const buttonContent = clickedIndex === index ? "SOON" : currentLink.text;
+          return (
           <li className="menu__list_item">
-            <a
-              href={currentLink.path}
+            <span
               className="menu__link"
+              onClick={handleMenuItem}
             >
-              {currentLink.text}
-            </a>
+              {buttonContent}
+            </span>
           </li>
-        ))}
+        )})}
       </motion.ul>
     </div>
   );

@@ -3,10 +3,21 @@
 .creators {
   background-color: $light-cream;
   width: 100vw;
-  position: absolute;
-  top: 146vh;
   color: $black;
   padding: 4vw 0;
+  margin-top: -20vh;
+
+  & h1 {
+    font-size: 2vw;
+  }
+
+  & h2 {
+    font-size: 1.5vw;
+  }
+
+  & p {
+    font-size: 1.2vw;
+  }
 
   @include mq($tablet-large) {
     padding: 7vw 0;
@@ -15,7 +26,8 @@
   &__lists {
     display: flex;
     flex-direction: column;
-    gap: 4vw;
+    gap: 2vw;
+    margin-top: 2.5vw;
 
     @include mq($tablet-large) {
       gap: 8vw;
@@ -25,7 +37,6 @@
   }
 
   &__title {
-    text-align: center;
     color: $orange;
   }
 
@@ -38,13 +49,11 @@
   }
 
   &__sub_title {
-    text-align: center;
     font-style: normal;
     font-weight: 400;
     line-height: 85.6%;
     letter-spacing: 1.12px;
     max-width: 50vw;
-    margin: 0 auto;
 
     @include mq($tablet-large) {
       max-width: none;
@@ -53,7 +62,6 @@
   }
 
   &_leaders {
-    margin-top: 5vw;
     font-family: Din, sans-serif;
   }
 
@@ -98,10 +106,9 @@
       flex-direction: column;
       max-width: 50vw;
       gap: 1.5vw;
-      
+
       @include mq($tablet-large) {
         max-width: none;
-        
       }
 
       &_first {
@@ -118,7 +125,7 @@
     &__link {
       display: block;
       max-width: fit-content;
-      padding: 1vw;
+      padding: 0.3vw 1vw 1vw;
       text-transform: none;
       font-weight: bold;
       color: $white;
@@ -126,8 +133,10 @@
 
       @include hoverForLinks($cream, $black);
 
-      @include mq($tablet-large) {
-        font-size: 4vw;
+      &_text {
+        position: relative;
+        z-index: 10;
+        font-size: 1.2vw;
       }
     }
   }

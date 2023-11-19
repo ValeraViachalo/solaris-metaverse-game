@@ -115,6 +115,8 @@ const Technology: React.FC = () => {
               style={{ backgroundColor: button.isHovered ? button.color : "" }}
               onMouseEnter={() => handleHover(button.id)}
               onMouseLeave={() => handleLeave(button.id)}
+              target="_blank"
+              rel="noreferrer"
             >
               {button.name}
               <img src={button.svg} alt={button.name} />

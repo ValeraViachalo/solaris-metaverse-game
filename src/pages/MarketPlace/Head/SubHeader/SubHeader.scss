@@ -1,0 +1,97 @@
+@import "../../../../styles/global.scss";
+
+.subheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #000;
+
+  margin-top: 4vw;
+  height: 5vw;
+  padding: 0 1vw;
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    position: relative;
+  }
+
+  &__button {
+    cursor: pointer;
+    color: #100f0f;
+    background-color: #ddb724;
+    padding: 1vw;
+    width: 14vw;
+    text-align: center;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+    text-wrap: nowrap;
+  }
+
+  &__list {
+    display: flex;
+    gap: 1vw;
+    position: absolute;
+    top: 5vw;
+  }
+
+  &__link {
+    text-transform: none;
+    font-size: 1.5vw;
+    text-align: center;
+
+    text-wrap: nowrap;
+    padding: 0.3vw;
+    color: $white;
+    @include hoverForLinks($white);
+  }
+}
+
+.menu {
+  position: relative;
+
+  &__title {
+    @extend %link;
+    cursor: pointer;
+    padding: 1.3vw;
+
+    transition: all 0.3s ease;
+
+    &--active {
+      background-color: $white;
+      color: $black;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 4.8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-wrap: nowrap;
+    background-color: $white;
+    text-align: center;
+
+    &_item {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+    }
+  }
+
+  &__link {
+    padding: 1.4vw;
+    color: $black;
+    position: relative;
+    z-index: 2;
+    @include hoverForLinks($black, $white);
+  }
+}

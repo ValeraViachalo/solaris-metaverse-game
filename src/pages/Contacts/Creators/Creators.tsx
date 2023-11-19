@@ -78,7 +78,7 @@ const Creators = () => {
               href="mailto:JOBSSolarisMV@spacesol.com"
               className="creators_footer__link"
             >
-              <span style={{ position: 'relative', zIndex: '10' }}>
+              <span className="creators_footer__link_text">
                 JOBSSolarisMV@spacesol.com
               </span>
             </a>

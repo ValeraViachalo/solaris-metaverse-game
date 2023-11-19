@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import FullWidthBg from "../../../components/FullWidthBg/FullWidthBg";
+import SubHeader from './SubHeader/SubHeader';
 
 import headBg from "../../../images/MarketPlace/marketplace.jpg";
 import "./Head.scss";
@@ -42,17 +43,8 @@ const Head = () => {
 
   return (
     <section className="marketplace">
-      {true && (
-        <div className="subheader">
-          <h2 className="subheader__logo">MARCKETPLACE SMV</h2>
-          <div className="subheader__menu">
-         
-            <button className="subheader__button" onClick={handleClick}>
-              {buttonContent}
-            </button>
-          </div>
-        </div>
-      )}
+      <SubHeader />
+
       <FullWidthBg
         url={headBg}
         type="image"

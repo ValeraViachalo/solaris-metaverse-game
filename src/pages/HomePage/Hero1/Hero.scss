@@ -47,10 +47,10 @@
   right: 0;
 
   &__top {
+    background: url("../../../images/home/hero-part-1.png") no-repeat center;
     top: 0;
     height: 86vh;
     width: 100vw;
-    background: url("../../../images/home/hero-part-1.png") no-repeat;
     background-size: cover;
     z-index: -1;
   }

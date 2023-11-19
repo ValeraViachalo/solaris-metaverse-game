@@ -9,14 +9,26 @@
 
   & h1 {
     font-size: 2vw;
-  }
 
+    @include mq() {
+      font-size: 6vw;
+    }
+  }
+  
   & h2 {
     font-size: 1.5vw;
+    
+    @include mq() {
+      font-size: 4.5vw;
+    }
   }
-
+  
   & p {
     font-size: 1.2vw;
+    
+    @include mq() {
+      font-size: 3.2vw;
+    }
   }
 
   @include mq($tablet-large) {
@@ -137,6 +149,10 @@
         position: relative;
         z-index: 10;
         font-size: 1.2vw;
+
+          @include mq() {
+            font-size: 4.5vw;
+          }
       }
     }
   }

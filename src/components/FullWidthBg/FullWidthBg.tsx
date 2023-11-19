@@ -1,5 +1,6 @@
 import classNames  from 'classnames'
 import { FC, ReactNode, forwardRef, ForwardedRef } from "react";
+import { useInView } from 'react-intersection-observer'
 import "./FullWidthBg.scss";
 
 type Props = {
@@ -21,11 +22,15 @@ const FullWidthBg = forwardRef<HTMLDivElement, Props>(({
   type = "image",
   style,
   ...otherProps
-}, ref) => {
+}) => {
   const classForBg = classNames('full_width_image__item', customClass);;
 
   const classForSection = classNames('full_width_image', classSection);
     
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    fallbackInView: true,
+  });
 
   return (
     <div className={classForSection} ref={ref} style={style} {...otherProps}>

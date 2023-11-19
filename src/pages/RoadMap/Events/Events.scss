@@ -7,18 +7,18 @@
   background: $shadow;
 
   @include mq() {
-    height: 50vw;
+    height: 60vh;
+    min-height: 400px;
   }
 
   @include mq($laptop) {
     justify-content: center;
-    padding: 20px 0;
   }
 
   &__text {
     display: flex;
     align-items: center;
-    padding: 60px;
+    padding: 6vw 13vw;
     gap: 3vw;
     text-align: center;
     color: $white;

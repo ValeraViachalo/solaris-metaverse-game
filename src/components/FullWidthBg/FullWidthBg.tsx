@@ -34,6 +34,8 @@ const FullWidthBg = forwardRef<HTMLDivElement, Props>(({
           loop
           muted
           autoPlay
+          webkit-playsinline
+          playsInline
           className={classForBg}
         >
           <source src={url} />

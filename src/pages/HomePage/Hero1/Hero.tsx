@@ -1,8 +1,9 @@
 import gsap from 'gsap';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ScrollTrigger } from 'gsap/all';
 import { motion } from 'framer-motion';
 import PopUp from './PopUp/PopUp';
+import TechSupportIcon from "../../../components/TechSupportIcon/TechSupportIcon";
 
 import windows from '../../../images/home/windows.svg'
 import mac from '../../../images/home/mac_os.svg'
@@ -58,8 +59,21 @@ const downloadClick = {
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: '.hero',
+          start: '60% top',
+          onEnter:() => setIsOpen(false),
+        }
+      })
+  })
+
   return (
     <section id="hero" className="hero">
+      <TechSupportIcon href="https://web.telegram.org/a/#6406621205" />
       <ParalaxBackground />
         <p className="small-text hero__under_header">
           Connect MetaMask wallet and get 150$ols Token as a gift, which will be

@@ -8,16 +8,10 @@ interface TechSupportIconProps {
 }
 
 const TechSupportIcon: React.FC<TechSupportIconProps> = ({ href }) => {
-  const handleIconClick = () => {
-    if (href) {
-      window.location.href = href;
-    }
-  };
-
   return (
-    <div className="tech-support-icon" onClick={handleIconClick}>
-      <img src={Support} className="support-image" />
-    </div>
+    <a className="tech-support-icon" href={href} target="_blank" rel="noreferrer">
+      <img src={Support} className="support-image" alt="support background"/>
+    </a>
   );
 };
 

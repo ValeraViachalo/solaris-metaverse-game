@@ -21,6 +21,11 @@
     border-top: 0.2vw solid white;
     border-bottom: 0.2vw solid white;
 
+    @include mq() {
+      width: 80vw;
+      gap: 2.5vw;
+    }
+
     &__futere_title {
       margin-bottom: 0.4vw;
     }

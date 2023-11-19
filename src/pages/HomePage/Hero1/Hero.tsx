@@ -11,12 +11,6 @@ import { ScrollTrigger } from 'gsap/all';
 const Hero = () => {
   return (
     <section id="hero" className="hero">
-      {/* <FullWidthBg
-        url={HeroImagePart1}
-        alt="hero"
-        classSection="hero"
-        customClass="hero__image-top"
-      > */}
       <ParalaxBackground />
         <p className="small-text hero__under_header">
           Connect MetaMask wallet and get 150$ols Token as a gift, which will be
@@ -38,7 +32,6 @@ const Hero = () => {
             ONLY FOR PC
           </h2>
         </div>
-      {/* </FullWidthBg> */}
     </section>
   );
 };

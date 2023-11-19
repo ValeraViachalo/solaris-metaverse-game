@@ -6,7 +6,7 @@
   background-color: $black;
 
   @include mq() {
-    height: 69vh;
+    height: 150vw;
     min-height: 700px;
   }
 

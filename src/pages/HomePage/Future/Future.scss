@@ -1,24 +1,39 @@
 @import "../../../styles/global.scss";
 
 .future {
-    position: relative;
-    background: $shadow;
+  position: relative;
+  background: $shadow;
 
-    &__image {
-        object-position: left;
-        
+  @include mq() {
+    background-color: $black;
+    height: 124vw;
+    min-height: 400px;
+  }
+
+  &__image {
+    object-position: left;
+
+    @include mq() {
+      object-position: top;
+      object-fit: contain;
+      z-index: 0;
     }
+  }
 
-    &__text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 
-        display: flex;
-        flex-direction: column;
-        gap: 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+
+    @include mq() {
+      width: 80%;
+      top: 85vw;
     }
+  }
 }
-

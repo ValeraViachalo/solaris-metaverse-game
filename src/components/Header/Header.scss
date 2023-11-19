@@ -13,7 +13,7 @@
   z-index: 10;
 
   @include mq() {
-    height: 10vw;
+    height: 20vw;
   }
 
   &__navigation {
@@ -24,6 +24,7 @@
 
   &__list {
     display: flex;
+    align-items: center;
     padding: 0 12px;
 
     &_item {
@@ -33,11 +34,14 @@
   }
 
   &__link {
-    font-size: 2.3vw;
     padding: 0.7vw 2.2vw;
     display: block;
     color: $white;
     @include hoverForLinks($white);
+
+    @include mq($tablet, '>') {
+      font-size: 2.3vw;
+    }
     
     &--wallet {
       width: 27vw;

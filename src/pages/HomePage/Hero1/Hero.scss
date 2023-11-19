@@ -4,6 +4,10 @@
   position: relative;
   height: 120vh;
 
+  @include mq() {
+    height: 100vh;
+  }
+
   &__under_header {
     position: absolute;
     right: 3vw;
@@ -15,6 +19,10 @@
     -webkit-text-fill-color: transparent;
     width: 32vw;
     z-index: 1;
+
+    @include mq() {
+      display: none;
+    }
   }
 
   .about {
@@ -26,8 +34,17 @@
     flex-direction: column;
     gap: 0.4vw;
 
-    &_title {
+    @include mq() {
+      left: 6vw;
+      bottom: 16vw;
+    }
+
+    &__title {
       text-wrap: nowrap;
+
+      @include mq() {
+        font-size: 7vw;
+      }
     }
     
     &_sub_title {
@@ -37,6 +54,10 @@
       -webkit-text-fill-color: transparent;
 
       font-size: 2vw;
+
+      @include mq() {
+        font-size: 7vw;
+      }
     }
   }
 }
@@ -81,5 +102,23 @@
     display: flex;
     align-items: flex-end;
     gap: 6vw;
+
+    @include mq() {
+      text-align: center;
+      font-size: 13vw;
+      display: block;
+
+      bottom: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+
+      mix-blend-mode: difference;
+
+      background: $golden;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 }

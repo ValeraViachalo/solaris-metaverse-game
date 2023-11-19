@@ -38,7 +38,7 @@ const SubHeader = () => {
     setIsClicked(!isClicked);
   };
 
-  const buttonContent = isClicked ? "***********" : "0.86908862 ETH";
+  const buttonContent = isClicked ? "**********" : "0.86908862 ETH";
 
   return (
     <div className="subheader">

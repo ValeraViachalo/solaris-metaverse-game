@@ -35,10 +35,9 @@ const EventCard: FC<Props> = ({ id, title, image, date, type, leftText, rightTex
         url={image}
         type="image"
         classSection="event_card"
-        ref={description}
         style={opacity(isInView)}
       >
-        <div className="event_card__text"  id={`${id}`}>
+        <div className="event_card__text" ref={description} id={`${id}`}>
           <p
             style={opacity(isInView)}
             className="event_card__main_text"

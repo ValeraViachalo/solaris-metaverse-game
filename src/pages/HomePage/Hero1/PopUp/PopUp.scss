@@ -34,22 +34,6 @@
     text-transform: none;
   }
 
-  &__button_close {
-    position: absolute;
-    top: 3vw;
-    left: 3vw;
-    width: 3vw;
-    height: 3vw;
-    background: url("../../../../images/home/cross.svg") no-repeat center;
-    background-position: 0;
-    background-size: 80%;
-    transition: all 0.3s ease;
-
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-
   &__blur {
     position: fixed;
     top: 0;

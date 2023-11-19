@@ -1,6 +1,7 @@
 import './AboutGame.scss';
 import chatGpt from '../../../images/home/ChatGPT.png';
 import featuresContent from '../../../data/GameFeatures.json';
+import { useInView } from 'react-intersection-observer'
 
 import first from '../../../images/home/game_features/first.jpg'
 import second from '../../../images/home/game_features/second.jpg'
@@ -23,8 +24,13 @@ const getImage = (feture: string) => {
 }
 
 const AboutGame = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    fallbackInView: true,
+  });
+
   return (
-    <section className="about_game">
+    <section className="about_game" ref={ref}>
       <section className="container about_game__container">
         <div className="main_info">
           <div className="main_info__top">
@@ -70,7 +76,7 @@ const AboutGame = () => {
         </div>
 
         <ul className="game_features">
-          {featuresContent.map((currentFeature, i) => {
+          {inView && featuresContent.map((currentFeature, i) => {
             const {photo, text} = currentFeature;
 
             return (

@@ -34,24 +34,26 @@ const FullWidthBg = forwardRef<HTMLDivElement, Props>(({
 
   return (
     <div className={classForSection} ref={ref} style={style} {...otherProps}>
-      {type === "video" && typeof url === "string" ? (
-        <video
-          loop
-          muted
-          autoPlay
-          webkit-playsinline
-          playsInline
-          className={classForBg}
-        >
-          <source src={url} />
-        </video>
-      ) : (
-        <img
-          src={url}
-          alt={alt ? alt : 'background'}
-          className={classForBg}
-          loading="lazy"
-        />
+      {inView && (
+        type === "video" && typeof url === "string" ? (
+          <video
+            loop
+            muted
+            autoPlay
+            webkit-playsinline
+            playsInline
+            className={classForBg}
+          >
+            <source src={url} />
+          </video>
+        ) : (
+          <img
+            src={url}
+            alt={alt ? alt : 'background'}
+            className={classForBg}
+            loading="lazy"
+          />
+        )
       )}
 
       {children}

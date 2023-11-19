@@ -95,7 +95,7 @@ const PopUp = () => {
             initial="closed"
           >
             <button
-              className="pop_up__button_close"
+              className="cross"
               onClick={() => setIsOpen(false)}
             />
             <p>

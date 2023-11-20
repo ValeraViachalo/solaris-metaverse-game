@@ -14,7 +14,7 @@ const downloadClick = {
   block: {
     open: {
       width: "170%",
-      height: "270%",
+      height: "420%",
       left: '50%',
       transition: {
         duration: 0.8,

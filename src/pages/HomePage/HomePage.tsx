@@ -1,5 +1,5 @@
 "use client";
-import Hero from "./Hero1/Hero";
+import Hero from "./Hero/Hero";
 import Future from "./Future/Future";
 import Download from "./Download/Download";
 import AboutProject from "./AboutProject/AboutProject";
@@ -8,7 +8,7 @@ import AboutGame from "./AboutGame/AboutGame";
 import Leviathan from "./Leviathans/Leviathan";
 import { Transition } from "../../components/Transition/Transition";
 import Technology from "./Technology/Technology";
-import { useIsPresent } from 'framer-motion';
+import { useIsPresent } from "framer-motion";
 
 function Home() {
   const isPresent = useIsPresent();
@@ -26,7 +26,7 @@ function Home() {
         <Leviathan />
       </main>
 
-      <Transition isPresent={isPresent}/>
+      <Transition isPresent={isPresent} />
     </>
   );
 }

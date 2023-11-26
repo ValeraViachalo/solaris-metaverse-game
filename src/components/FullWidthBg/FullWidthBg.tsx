@@ -35,8 +35,8 @@ const FullWidthBg = forwardRef<HTMLDivElement, Props>(
 
   return (
     <div className={classForSection} ref={ref} style={style} {...otherProps}>
-      {inView && (
-        type === "video" && typeof url === "string" ? (
+      {/* {inView && ( */}
+        {(type === "video" && typeof url === "string" ? (
           <video
             loop
             muted

@@ -113,7 +113,11 @@
           align-items: center;
           flex-direction: column;
           gap: 1vw;
-          font-size: 1.5vw;
+
+          @include mq($laptop, ">") {
+            font-size: 1.5vw;
+            gap: 3vw;
+          }
         }
 
         &_logo {
@@ -129,7 +133,10 @@
             rgba(243, 255, 101, 0.69) 100%
           );
           transition: all 0.3s ease;
-          font-size: 1.2vw;
+
+          @include mq($laptop, ">") {
+            font-size: 1.2vw;
+          }
 
           &:hover {
             opacity: 0.7;
@@ -141,6 +148,11 @@
         width: 1.5vw;
         height: 1.5vw;
         cursor: pointer;
+
+        @include mq() {
+          width: 5vw;
+          height: 5vw;
+        }
       }
     }
 

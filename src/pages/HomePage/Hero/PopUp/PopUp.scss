@@ -13,6 +13,7 @@
     position: absolute;
     left: 2vw;
     top: 6vw;
+
     @include mq() {
       width: 15vw;
       height: 12vw;

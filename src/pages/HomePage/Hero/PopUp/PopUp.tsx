@@ -4,11 +4,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 
+const isMobile = window.innerWidth <= 768;
 const popUp = {
   open: {
     width: "76vw",
-    height: "22vw",
-    padding: "7vw 5vw",
+    height: isMobile ? "66vw" : "22vw",
+    padding: isMobile ? "11vw 8vw" : "7vw 5vw",
     left: "50%",
     top: "50%",
     opacity: 1,

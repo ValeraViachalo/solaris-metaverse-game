@@ -10,10 +10,12 @@ import mac from '../../../images/home/mac_os.svg'
 
 import "./Hero.scss";
 
+const isMobile = window.innerWidth <= 768;
+
 const downloadClick = {
   block: {
     open: {
-      width: "170%",
+      width: isMobile ? "100%" : "170%",
       height: "420%",
       left: '50%',
       transition: {

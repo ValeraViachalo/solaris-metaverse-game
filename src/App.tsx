@@ -10,6 +10,15 @@ import PreLoader from './components/PreLoader/PreLoader';
 
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout( () => {
+      setIsLoading(false);
+      document.body.style.cursor = 'default'
+      window.scrollTo(0,0);
+    }, 3000)
+  }, [])
 
   const element = useRoutes([
     {
@@ -36,6 +45,7 @@ function App() {
 
   return (
     <main className="app">
+      { isLoading && <PreLoader /> }
       <Header />
 
       <section className="app__section">

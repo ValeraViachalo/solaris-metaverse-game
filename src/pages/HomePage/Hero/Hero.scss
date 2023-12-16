@@ -2,11 +2,10 @@
 
 .hero {
   position: relative;
-  height: 120vh;
+  height: 100svh;
 
   @include mq() {
     margin-top: 10vw;
-    height: 100vh;
   }
 
   &__under_header {
@@ -97,7 +96,7 @@
       }
 
       &_content {
-        height: 15vw;
+        height: 100%;
         width: 100%;
         justify-content: space-evenly;
       }
@@ -214,7 +213,7 @@
     mix-blend-mode: soft-light;
 
     position: absolute;
-    bottom: 54vh;
+    bottom: 48svh;
     left: 13vw;
 
     display: flex;
